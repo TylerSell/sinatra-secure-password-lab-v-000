@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
   post "/login" do
     user = User.find_by(params[:username])
     
-    if user 
+    if user && User.has_secure_password
       
     else
       redirect to "/failure"
