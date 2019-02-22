@@ -1,5 +1,6 @@
 class UpdatePassword < ActiveRecord::Migration
   def change
-    change_column :users, :password, :text
+    remove_column :users, :password, :text
+    add_column :users, :
   end
 end
